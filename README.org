@@ -1,0 +1,27 @@
+#+TITLE: Minecraft Bedrock Server Auto-Updater
+#+AUTHOR: Fares Bessrour
+
+* extractor.py
+Download the latest version of Minecraft Bedrock Linux server.
+
+* todo
+Script to stop the current minecraft daemon, (backup), unzip to the minecraft folder, push back the ~whitelist.json~ and ~server.properties~
+
+* How-To
+** Prerequisites
+- Python 3
+- Linux (although we could add support for windows if requested)
+** Install librairies
+#+begin_src shell
+python3 -m venv venv
+. venv/bin/activate.fish # or source venv/bin/activate for bash/zsh/sh
+pip install -r requirements.txt
+#+end_src
+** Run
+Extractor will download the last bedrock server's zip file to ~./minecraft.zip~
+#+begin_src shell
+python extractor.py
+#+end_src
+
+* Is it noice
+Yes
